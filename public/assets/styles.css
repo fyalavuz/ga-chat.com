@@ -119,6 +119,15 @@ a:hover {
   box-shadow: 0 8px 22px rgba(124, 92, 255, 0.35);
 }
 
+.logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: block;
+  object-fit: contain;
+  box-shadow: 0 8px 22px rgba(124, 92, 255, 0.35);
+}
+
 .site-nav,
 .footer-nav {
   display: flex;
@@ -376,4 +385,3 @@ a:hover {
     animation: none !important;
   }
 }
-
