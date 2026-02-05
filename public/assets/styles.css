@@ -64,8 +64,6 @@ a { color: inherit; text-decoration: none; }
 
 .brand-icon {
   border-radius: 8px;
-  background: #fff;
-  padding: 3px;
 }
 
 .nav {
@@ -585,8 +583,6 @@ a { color: inherit; text-decoration: none; }
 
 .footer-left img {
   border-radius: 4px;
-  background: #fff;
-  padding: 2px;
 }
 
 .footer-nav {
