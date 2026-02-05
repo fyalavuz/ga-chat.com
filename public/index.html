@@ -3,22 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <title>GA Chat</title>
+    <meta name="color-scheme" content="dark" />
+    <title>GA Chat - AI-Powered Google Analytics Dashboard</title>
     <meta
       name="description"
-      content="GA Chat is a lightweight, modern chat experience for real-time conversations."
+      content="Chat with your Google Analytics data using AI. Get instant insights, beautiful charts, and natural language queries for your website analytics."
     />
 
-    <meta property="og:title" content="GA Chat" />
+    <meta property="og:title" content="GA Chat - AI-Powered Analytics" />
     <meta
       property="og:description"
-      content="A lightweight, modern chat experience for real-time conversations."
+      content="Chat with your Google Analytics data using AI. Desktop app for macOS and Windows."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ga-chat.com/" />
 
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/ic_analytics.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/styles.css" />
 
     <!-- Google tag (gtag.js) -->
@@ -33,90 +33,192 @@
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-
-    <header class="site-header">
+    <!-- Header -->
+    <header class="header">
       <div class="container header-inner">
-        <a class="brand" href="./" aria-label="GA Chat Home">
-          <img
-            class="logo-img"
-            src="assets/ga-chat-logo.png"
-            width="34"
-            height="34"
-            alt=""
-          />
+        <a class="brand" href="./">
+          <img src="assets/ic_analytics.svg" width="28" height="28" alt="" class="brand-icon" />
           <span class="brand-text">GA Chat</span>
         </a>
-
-        <nav class="site-nav" aria-label="Primary navigation">
+        <nav class="nav">
           <a href="#features">Features</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
+          <a href="#download">Download</a>
+          <a href="https://github.com/fyalavuz/ga-chat-desktop" target="_blank" rel="noopener" class="nav-github">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
         </nav>
       </div>
     </header>
 
-    <main id="content">
+    <main>
+      <!-- Hero -->
       <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <h1>Chat, simplified.</h1>
-            <p class="lede">
-              GA Chat is a lightweight, modern chat experience for real-time conversations—built with a
-              focus on clarity and ease of use.
-            </p>
-            <div class="actions">
-              <a class="button primary" href="mailto:support@ga-chat.com">Contact</a>
-              <a class="button" href="privacy.html">Read Privacy Policy</a>
-            </div>
-            <p class="fineprint">
-              By using GA Chat, you agree to our <a href="terms.html">Terms of Use</a>.
-            </p>
+        <div class="container">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Open Source Desktop App
           </div>
+          <h1 class="hero-title">
+            Chat with your<br />
+            <span class="gradient-text">Google Analytics</span>
+          </h1>
+          <p class="hero-desc">
+            Ask questions about your website data in natural language.
+            Get instant insights, beautiful charts, and AI-powered analysis.
+          </p>
+          <div class="hero-actions">
+            <a href="https://github.com/fyalavuz/ga-chat-desktop/releases/latest" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download
+            </a>
+            <a href="https://github.com/fyalavuz/ga-chat-desktop" target="_blank" rel="noopener" class="btn btn-secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View Source
+            </a>
+          </div>
+          <div class="hero-platforms">
+            <span class="platform-tag">macOS</span>
+            <span class="platform-tag">Windows</span>
+          </div>
+        </div>
+      </section>
 
-          <div class="hero-card" aria-hidden="true">
-            <div class="mock">
-              <div class="mock-top">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <!-- App Preview -->
+      <section class="preview">
+        <div class="container">
+          <div class="preview-window">
+            <div class="preview-titlebar">
+              <div class="titlebar-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
               </div>
-              <div class="mock-body">
-                <div class="bubble left">Hey! 👋</div>
-                <div class="bubble right">Hi—welcome to GA Chat.</div>
-                <div class="bubble left">Where can I find the legal pages?</div>
-                <div class="bubble right">Footer links: Privacy + Terms.</div>
+              <span class="titlebar-title">GA Chat</span>
+            </div>
+            <div class="preview-body">
+              <div class="preview-sidebar">
+                <div class="sidebar-property">
+                  <span class="property-label">Active Property</span>
+                  <span class="property-name">my-website.com</span>
+                </div>
+                <div class="sidebar-chats">
+                  <div class="chat-item active">Traffic Analysis</div>
+                  <div class="chat-item">Top Pages Report</div>
+                  <div class="chat-item">Device Stats</div>
+                </div>
+              </div>
+              <div class="preview-chat">
+                <div class="chat-messages">
+                  <div class="msg msg-user">Show me the top 10 most visited pages this month</div>
+                  <div class="msg msg-assistant">
+                    <img src="assets/ic_analytics.svg" class="msg-avatar" alt="" />
+                    <div class="msg-content">
+                      <p>Here are the top 10 pages by pageviews for this month:</p>
+                      <div class="msg-chart">
+                        <div class="chart-bar" style="--w: 100%"><span>/</span><span>12,450</span></div>
+                        <div class="chart-bar" style="--w: 72%"><span>/about</span><span>8,964</span></div>
+                        <div class="chart-bar" style="--w: 58%"><span>/pricing</span><span>7,223</span></div>
+                        <div class="chart-bar" style="--w: 45%"><span>/blog</span><span>5,607</span></div>
+                        <div class="chart-bar" style="--w: 38%"><span>/docs</span><span>4,733</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-input-mock">
+                  <span>Ask about your analytics data...</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="features" class="section">
+      <!-- Features -->
+      <section id="features" class="features">
         <div class="container">
-          <h2>Features</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>Fast</h3>
-              <p>Designed for snappy, real-time conversations across devices.</p>
+          <div class="section-header">
+            <h2>Everything you need to understand your data</h2>
+            <p>No more clicking through complex dashboards. Just ask.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <h3>Natural Language Queries</h3>
+              <p>Ask questions in plain language. No need to learn complex query builders or API parameters.</p>
             </div>
-            <div class="card">
-              <h3>Simple</h3>
-              <p>A clean interface that stays out of the way so you can focus on people.</p>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <h3>Beautiful Charts</h3>
+              <p>Auto-generated line, bar, pie, area charts and tables. Data visualization that makes sense.</p>
             </div>
-            <div class="card">
-              <h3>Transparent</h3>
-              <p>Clear privacy and terms pages, so you know what to expect.</p>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3>Privacy First</h3>
+              <p>Your data stays on your machine. Direct Google OAuth login - no middleman servers.</p>
             </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
+              <h3>Gemini AI Powered</h3>
+              <p>Uses Google Gemini to understand your questions and generate intelligent analytics reports.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3>Desktop Native</h3>
+              <p>Built with Electron for a smooth native experience on macOS and Windows.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3>Open Source</h3>
+              <p>Fully open source on GitHub. Inspect the code, contribute, or fork it for your needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download -->
+      <section id="download" class="download">
+        <div class="container">
+          <div class="download-card">
+            <h2>Ready to chat with your data?</h2>
+            <p>Download GA Chat for free. Available for macOS and Windows.</p>
+            <div class="download-buttons">
+              <a href="https://github.com/fyalavuz/ga-chat-desktop/releases/latest" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Download Latest Release
+              </a>
+            </div>
+            <p class="download-note">
+              Or build from source:
+              <code>git clone https://github.com/fyalavuz/ga-chat-desktop && npm install && npm run electron:dev</code>
+            </p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container footer-inner">
-        <p class="muted">© <span id="year"></span> GA Chat</p>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms of Use</a>
+        <div class="footer-left">
+          <img src="assets/ic_analytics.svg" width="20" height="20" alt="" />
+          <span>GA Chat</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="https://github.com/fyalavuz/ga-chat-desktop" target="_blank" rel="noopener">GitHub</a>
         </nav>
       </div>
     </footer>
