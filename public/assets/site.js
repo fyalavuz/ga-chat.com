@@ -13,6 +13,44 @@
     });
   });
 
+  // Scroll-triggered animations using Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Add animation class to elements and observe them
+  const animateElements = document.querySelectorAll('.features-grid, .download-card, .prompts-grid, .preview-window');
+  animateElements.forEach(el => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Add staggered animation to feature cards
+  const featureCards = document.querySelectorAll('.feature-card');
+  featureCards.forEach((card, index) => {
+    card.classList.add('animate-on-scroll');
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+
+  // Add staggered animation to prompt categories
+  const promptCats = document.querySelectorAll('.prompt-category');
+  promptCats.forEach((cat, index) => {
+    cat.classList.add('animate-on-scroll');
+    cat.style.transitionDelay = `${index * 0.05}s`;
+    observer.observe(cat);
+  });
+
   // GA Event Tracking
   const trackEvent = (action, category, label) => {
     if (typeof gtag === 'function') {
