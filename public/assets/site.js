@@ -2,6 +2,10 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  // Animation configuration
+  const STAGGER_DELAY_CARDS = 0.1; // seconds
+  const STAGGER_DELAY_PROMPTS = 0.05; // seconds
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener("click", e => {
@@ -39,7 +43,7 @@
   const featureCards = document.querySelectorAll('.feature-card');
   featureCards.forEach((card, index) => {
     card.classList.add('animate-on-scroll');
-    card.style.transitionDelay = `${index * 0.1}s`;
+    card.style.transitionDelay = `${index * STAGGER_DELAY_CARDS}s`;
     observer.observe(card);
   });
 
@@ -47,7 +51,7 @@
   const promptCats = document.querySelectorAll('.prompt-category');
   promptCats.forEach((cat, index) => {
     cat.classList.add('animate-on-scroll');
-    cat.style.transitionDelay = `${index * 0.05}s`;
+    cat.style.transitionDelay = `${index * STAGGER_DELAY_PROMPTS}s`;
     observer.observe(cat);
   });
 
