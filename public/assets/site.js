@@ -2,6 +2,10 @@
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  // Animation configuration
+  const STAGGER_DELAY_CARDS = 0.1; // seconds
+  const STAGGER_DELAY_PROMPTS = 0.05; // seconds
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener("click", e => {
@@ -11,6 +15,44 @@
         target.scrollIntoView({ behavior: "smooth" });
       }
     });
+  });
+
+  // Scroll-triggered animations using Intersection Observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Add animation class to elements and observe them
+  const animateElements = document.querySelectorAll('.features-grid, .download-card, .prompts-grid, .preview-window');
+  animateElements.forEach(el => {
+    el.classList.add('animate-on-scroll');
+    observer.observe(el);
+  });
+
+  // Add staggered animation to feature cards
+  const featureCards = document.querySelectorAll('.feature-card');
+  featureCards.forEach((card, index) => {
+    card.classList.add('animate-on-scroll');
+    card.style.transitionDelay = `${index * STAGGER_DELAY_CARDS}s`;
+    observer.observe(card);
+  });
+
+  // Add staggered animation to prompt categories
+  const promptCats = document.querySelectorAll('.prompt-category');
+  promptCats.forEach((cat, index) => {
+    cat.classList.add('animate-on-scroll');
+    cat.style.transitionDelay = `${index * STAGGER_DELAY_PROMPTS}s`;
+    observer.observe(cat);
   });
 
   // GA Event Tracking
